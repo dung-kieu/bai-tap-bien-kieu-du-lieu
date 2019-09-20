@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>'
+<body>
+        <table >
+            <tr>
+                <td colspan="4">
+                    <form>
+                        <input type="number" id="1">
+                        <br><br>
+                        <input type="number" id="2">
+                    </form>
+                    <br>
+                    <button type="button" id="add" onclick="cal(this.id)" >+</button>
+                    <button type="button" id="min" onclick="cal(this.id)" >-</button>
+                    <button type="button" id="mul" onclick="cal(this.id)" >*</button>
+                    <button type="button" id="div" onclick="cal(this.id)" >/</button>
+
+                </td>
+            </tr>
+        </table>
+        <h2 id="kq">ket qua la : </h2>
+        <script>
+
+           function cal(id) {
+               let a = parseFloat(document.getElementById("1").value);
+               let b = parseFloat(document.getElementById("2").value);
+               document.getElementById("kq").innerText="ket qua la : ";
+               if(id == "add"){
+                   let c = a+b;
+                   document.getElementById("kq").innerText+=c
+                   document.getElementById("1").value = c;
+               }
+               if(id == "min"){
+                   let c = a-b;
+                   document.getElementById("kq").innerText+=c;
+                   document.getElementById("1").value = c;
+               }
+               if(id == "mul"){
+                   let c=a*b;
+                   document.getElementById("kq").innerText+=c;
+                   document.getElementById("1").value = c;
+               }
+               if (id =="div"){
+                   let c =a/b;
+                   document.getElementById("kq").innerText+=c;
+                   document.getElementById("1").value = c;
+               }
+           }
+
+        </script>
+</body>
+</html>
