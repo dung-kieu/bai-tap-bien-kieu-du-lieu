@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <table>
+            <tr>
+                <th>Amount </th>
+                <th>From Currency </th>
+                <th>To Currency</th>
+            </tr>
+            <tr>
+                <td><form>
+                    <input type="number" id="1"  >
+                    </form>
+                </td>
+                <td>
+                    <select id="2">
+                        <option value="VND" >VND</option>
+                        <option value="$" >$</option>
+                    </select>
+                </td>
+                <td>
+                    <select id="3">
+                        <option value="$" >$</option>
+                        <option value="VND">VND</option>
+                    </select>
+                </td>
+                <td>
+                    <button type="button" onclick="f()">Click me</button>
+
+                </td>
+            </tr>
+        </table>
+        <pre id ="dis"></pre>
+        <script>
+           function f() {
+               let a = parseFloat(document.getElementById('1').value);
+               let b = document.getElementById('2').value;
+               let c = document.getElementById('3').value;
+               if(b=="VND" && c=="$"){
+                   document.getElementById("dis").innerText=a/23000;
+               }
+               if(b=="$" && c=="VND"){
+                   document.getElementById("dis").innerText=a*23000;
+               }
+               if (b=="VND" && c=="VND"){
+                   document.getElementById("dis").innerText="lua chon lai tien muon doi";
+               }
+               if (b=="$" && c=="$") {
+                   document.getElementById("dis").innerText = "lua chon lai tien muon doi";
+               }
+           }
+
+        </script>
+</body>
+</html>
