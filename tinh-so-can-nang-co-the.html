@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+        <script>
+            let a=parseFloat(prompt("Nhập Cân Nặng Của Bạn (kg)"));
+            let b=parseFloat(prompt(" Nhập Chiều Cao Của Bạn (m)") +'2');
+            console.log(b);
+            bmi= a/b ;
+
+            if(bmi < 18.5)
+                alert("Cơ Thể của bạn"+" Underweight" );
+            else if (bmi <25.0 )
+                alert("Cơ Thể của bạn"+  " Normal" );
+            else if (bmi < 30.0)
+                alert("Cơ Thể của bạn"+  " Overweight" );
+            else
+                alert("Cơ Thể của bạn"+  " Obese" );
+        </script>
+</body>
+</html>
