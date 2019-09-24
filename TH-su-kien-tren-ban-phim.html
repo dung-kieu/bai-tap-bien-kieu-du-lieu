@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="dcrReady()">
+        <img id="luf" src="if/luf.jpg" style="position:absolute ; left :100px ; top : 100px ;" height="200" width="160"/>
+        <script>
+            function upArrowPressed() {
+                let element = document.getElementById("luf");
+                element.style.top =parseInt(element.style.top)- 5 + 'px';
+                console.log('keycode')
+            }
+            function dowArrowPressed() {
+                let element = document.getElementById("luf");
+                element.style.top = parseInt(element.style.top) + 5 + 'px';
+
+            }
+            function leftArrowPressed() {
+                let element = document.getElementById("luf");
+                element.style.left = parseInt(element.style.left) - 5 + 'px';
+
+            }
+            function rightArrowPressed() {
+                let element = document.getElementById("luf");
+                element.style.left =parseInt(element.style.left) + 5 + 'px';
+
+            }
+            function moveSelecttion(evt) {
+                switch (evt.keyCode) {
+                    case 37:
+                        leftArrowPressed();
+                        break;
+                    case 39:
+                        rightArrowPressed();
+                        break;
+                    case 38:
+                        upArrowPressed();
+                        break;
+                    case 40:
+                        dowArrowPressed();
+                        break;
+                }
+                
+            }
+            function  dcrReady() {
+                window.addEventListener('keydown',moveSelecttion);
+
+            }
+        </script>
+</body>
+</html>
