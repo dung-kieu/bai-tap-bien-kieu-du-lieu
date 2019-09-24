@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Do You Love Me</h1>
+    <button type="button" value="Yes" onclick="yescl()">Yes</button>
+    <button type="button" value="No" onmouseover="nocl()" id="no" style="position: absolute;left: 60px;top: 80px">No</button>
+    
+    <script>
+        function yescl() {
+            alert("Tôi biết mà <3");
+
+        }
+        function nocl() {
+            let no = document.getElementById("no");
+            let wh = parseInt(window.innerHeight);
+            let ww = parseInt(window.innerWidth);
+            let rh = parseInt(no.getBoundingClientRect().top);
+            let rw = parseInt(no.getBoundingClientRect().left);
+            let tmp1 = rh;
+            let tmp2 =rw;
+            if(rh == tmp1 && rw == tmp2){
+                rh = Math.random()*wh;
+                rw = Math.random()*ww;
+            }
+            no.style.left=rw+"px";
+            no.style.top=rh+"px";
+        }
+    </script>
+
+</body>
+</html>
