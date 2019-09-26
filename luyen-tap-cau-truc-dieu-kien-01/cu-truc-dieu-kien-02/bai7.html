@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let a=parseFloat(prompt("nhap a"));
+        let b=parseFloat(prompt("nhap b"));
+        let c=parseFloat(prompt("nhap c"));
+        d=b*b-4*a*c;
+        console.log(d);
+        if(d<0){
+            alert("phuong trình vô nghiệm!");
+        } else if (d==0) {
+            alert("phương trình có nghiệp duy nhất x = " + (-b / a * 2));
+        }else{
+            alert("phương trình có 2 nghiệm là x1= " +[(-b+Math.sqrt(d))/a*2] + " ;  x2= " + [(-b-Math.sqrt(d))/a*2] );
+        }
+    </script>
+</body>
+</html>
