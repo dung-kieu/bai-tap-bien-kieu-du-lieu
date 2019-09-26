@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <script>
+            let a=parseInt(prompt("Nhập số phút đã sử dụng của tháng :"));
+
+            if (a>200)
+                alert("so tiền phải trả là " + [(a-200)*200+50*600+400*150] +"vnđ" );
+            else if (a<50)
+                alert("so tiền phải trả là " +a*600 +"vnđ");
+            else
+                alert("so tiền phải trả là " +[(a-50)*400+50*600] +"vnđ")
+        </script>
+</body>
+</html>
