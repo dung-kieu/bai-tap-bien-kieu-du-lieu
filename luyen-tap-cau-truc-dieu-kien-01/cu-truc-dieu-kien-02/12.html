@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let a=parseInt(prompt("nhâp số tiền bạn vay đv(triệu đồng): "));
+        let b=parseInt(prompt("số tháng cần vay:"));
+        let c=parseInt(prompt("lãi suất/tháng:"));
+        let payout = 0;
+        for (e=1;e<=b;e++){
+            payout = a*c/100;
+            a+=payout;
+        }
+        alert("tiền vốn+ lãi tất toán cả kì là:"+ a);
+    </script>
+</body>
+</html>
